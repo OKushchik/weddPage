@@ -1,37 +1,34 @@
-/* Slick needs no get Reinitialized on window Resize after it was destroyed */
 $(window).on('load resize orientationchange', function() {
-    $('.carousel').each(function(){
-        var $carousel = $(this);
-        /* Initializes a slick carousel only on mobile screens */
-        // slick on mobile
-        if ($(window).width() > 824) {
-            if ($carousel.hasClass('slick-initialized')) {
-                $carousel.slick('unslick');
-            }
-        }
-        else{
-            if (!$carousel.hasClass('slick-initialized')) {
-                $carousel.slick({
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    mobileFirst: true,
-                });
-            }
-        }
-    });
-});
-
-
-$('.carousel').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    mobileFirst: true,
-    responsive: [
+  if ($('.carousel').hasClass('slick-initialized') === false && $(window).width() < 820) {
+    $('.carousel').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      mobileFirst: true,
+      arrows: false,
+      responsive: [
         {
-            breakpoint: 824,
-            settings: 'unslick'
-        }
-    ]
-});
+          breakpoint: 420,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true,
+            arrows: false,
+          }
+        },
+        {
+          breakpoint: 820,
+          settings: "unslick"
+        },
+      ]
+    });
+  }
+})
+
+
+
 
 

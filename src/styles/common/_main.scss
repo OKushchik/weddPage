@@ -9,12 +9,7 @@ body {
     margin: 0 auto;
     background: white;
 }
-.slick-prev.slick-arrow {
-    visibility: hidden;
-}
-.slick-next.slick-arrow {
-    visibility: hidden;
-}
+
 //Often used
 .wrapper {
     padding: 0 72px;
@@ -197,7 +192,7 @@ transform: rotate(45deg);
             background-color: transparent;
             border: 2px solid #FF699F;
             border-radius: 3px;
-            ;
+        
         }
 
         &__img {
@@ -222,19 +217,44 @@ transform: rotate(45deg);
     }
 
     &__items {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         margin-top: 48px;
     }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+            button {
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+                border-radius: 50%; 
+                border: 2px solid gray;
+                font-size: 0;
+                background-color: transparent;
+            }
+            .slick-active{
+                button {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%; 
+                    border: none;
+                    font-size: 0;
+                    background-color: #FF699F;
+                }
+            }   
+    }
 }
+  
+
 .service-block {
-    max-width: 33%;
-    padding-bottom: 74px;
+    width: 33%;
+    min-height: 550px;
     border: 1px solid rgba(0, 0, 0, 0.04);
     box-sizing: border-box;
     box-shadow: 0px 4px 30px rgba(207, 207, 207, 0.25);
     border-radius: 2px;
-    margin-bottom: 100px;
 
     &__img {
         width: 100%;
@@ -254,7 +274,140 @@ transform: rotate(45deg);
         font-size: 16px;
         line-height: 153.4%;
     }
+    
 }
+
+
+.offer {
+    margin-top: 100px;
+    &__title {
+    }
+
+    &__description {
+        margin-top: 24px;
+    }
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+}
+
+
+.offer-section {
+    width: 25%;
+    padding: 0 3%;
+    margin-bottom: 70px;
+    &__icon {
+        text-align: center;
+        font-size: 80px;
+        color: #FF699F;
+
+    }
+
+    &__title {
+        text-align: center;
+        font-family: "Montserrat-400";
+        font-size: 16px;
+        line-height: 153.4%;
+    }
+}
+
+.couches {
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__description {
+        margin-bottom: 30px;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.couch-card {
+    width: 50%;
+
+    &__img {
+        float: left;
+        display: block;
+        width: 50%;
+        margin-right: 33px;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__num {
+        margin-top: 43px;
+        font-family: "Montserrat-700";
+        font-size: 16px;
+    }
+
+    &__name {
+        margin-top: 8px;
+        font-family: "Montserrat-700";
+        font-size: 24px;
+    }
+
+    &__perfom {
+        margin-top: 8px;
+        font-family: "Montserrat-400";
+        font-size: 16px;
+    }
+
+    &__experiance {
+        margin-top: 24px;
+        font-family: "Montserrat-400";
+        font-size: 16px;
+
+        span {
+            opacity: 0.5;
+        }
+    }
+
+    &__ages {
+        margin-top: 24px;
+        font-family: "Montserrat-400";
+        font-size: 16px;
+
+        span {
+            opacity: 0.5;
+        }
+    }
+
+    &__styles {
+        margin-top: 24px;
+        font-family: "Montserrat-400";
+        font-size: 16px;
+
+        span {
+            opacity: 0.5;
+        }
+    }
+
+    &__btn {
+        margin-top: 88px;
+        margin-bottom: 80px;
+        width: 161px;
+        height: 46px;
+        color: #FF699F;
+        background-color: transparent;
+        border: 2px solid #FF699F;
+        border-radius: 3px;
+    }
+
+}
+.clearFloat {
+    clear: both;
+}
+
+
 @media only screen and (max-width: 1110px) {
     .show-case {
     
@@ -298,6 +451,7 @@ transform: rotate(45deg);
         padding-right: 50px;
     }
 
+  }
     @media only screen and (max-width: 824px) {
         .nav {
             display: none;
@@ -330,5 +484,12 @@ transform: rotate(45deg);
         .service-block {
             max-width: 100%;
         }
+        .offer-section {
+            width: 50%;
+        }
     }
-  }
+    @media only screen and (max-width: 420px) {
+        .offer-section {
+            width: 100%;
+        }
+    }
