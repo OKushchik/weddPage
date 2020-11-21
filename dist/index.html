@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Template</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <header class="navigation wrapper">
+    <h1 class="logo">Wedding Dance</h1>
+    <nav class="nav">
+      <ul class="nav__items menu">
+        <li class="menu__item"><a href="">Services</a></li>
+        <li class="menu__item"><a href="">Our Coaches</a></li>
+        <li class="menu__item"><a href="">Testimonials</a></li>
+        <li class="menu__item"><a href="">FAQ</a></li>
+        <li class="menu__item"><a href="">Lesson Review</a></li>
+      </ul>
+      <button class="nav__btn">Start</button>
+    </nav>
+    <div class="burger-icon burger-open" onclick="openPopup()">
+        <div class="burger-open__line"></div>
+        <div class="burger-open__line"></div>
+        <div class="burger-open__line"></div>
+    </div>
+  </header>
+
+
+  <div class="burger-popup">
+    <div class="burger-icon burger-close" onclick="closePopup()">
+      <div class="burger-close__line"></div>
+      <div class="burger-close__line"></div>
+    </div> 
+    <h2 class="burger-popup__title">Menu</h2>
+    <ul class="burger-popup__list">
+      <li class="burger-popup__item"><a href="#">Services</a></li>
+      <li class="burger-popup__item"><a href="#">Coaches</a></li>
+      <li class="burger-popup__item"><a href="#">Testimonials</a></li>
+      <li class="burger-popup__item"><a href="#">FAQs</a></li>
+      <li class="burger-popup__item"><a href="#">Lessons Review</a></li>
+    </ul>
+    <button class="burger-popup__btn">Let’s start</button>
+    <div class="burger-popup__backTitle">Menu</div>
+  </div> 
+
+
+  <section class="show-case wrapper">
+    <div class="show-case__text">
+      <h2 class="show-case__title">Wedding Dance Lessons</h2>
+      <h6 class="show-case__state">New Jersey</h6>
+      <p class="show-case__explanation">The wedding dance is one of the most important dances in your life. You look perfect and the whole 
+        audience is looking at you. Also, it becomes the favorite moment you like to play on videos and photos. 
+        Feel the moment
+      </p>
+      <button class="show-case__btn">Let Start</button>
+    </div>
+    <div class="show-case__img">
+      <img src="img/first-dance-i.jpg" alt="first-dance">
+    </div>
+  </section>
+
+
+  <section class="services wrapper">
+    <h2 class="services__title title-section">Our Services</h2>
+    <p class="services__description description-section">
+      We want to make your wedding day perfect that is why suggest 
+      a lot of options for dance: not only for a bride and groom but for their friends and relatives
+    </p>
+    <div class="services__items carousel">
+      <div class="service-block">
+        <img class="service-block__img" src="img/1196.jpg" alt="pic-1">
+        <h3 class="service-block__title">For Bride and Groom</h3>
+        <p class="service-block__description">
+          First Dance <br>
+          Parent & Child Dance
+        </p>
+      </div>
+      <div class="service-block">
+        <img class="service-block__img" src="img/image-1.jpg" alt="pic-2">
+        <h3 class="service-block__title">For Guests</h3>
+        <p class="service-block__description">
+          Groomsmen Dance<br>
+          Parent Dance<br>
+          Children’s Dance
+        </p>
+      </div>
+      <div class="service-block">
+        <img class="service-block__img" src="img/image.jpg" alt="pic-3">
+        <h3 class="service-block__title">Other events</h3>
+        <p class="service-block__description">
+          Bridal Party Dance<br>
+          Anniversary Dance
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    let burgerPopup =  document.querySelector('.burger-popup');
+    function openPopup() {
+      burgerPopup.style.display = 'block';
+    }
+    function closePopup() {
+      burgerPopup.style.display = 'none';
+    }
+    </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/slick-responsive.js"></script>
+</body>
+</html>
