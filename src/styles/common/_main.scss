@@ -327,17 +327,26 @@ transform: rotate(45deg);
     &__section {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .slick-arrow, .slick-dots {
+        visibility: hidden;
+        width: 0; 
+        height: 0;
+        display: flex;
+        flex-direction: row;
     }
 }
 
 .couch-card {
     width: 50%;
-
+    display: flex !important;
+    flex-direction: row;
     &__img {
-        float: left;
         display: block;
         width: 50%;
         margin-right: 33px;
+
         img {
             width: 100%;
         }
@@ -406,27 +415,50 @@ transform: rotate(45deg);
 .clearFloat {
     clear: both;
 }
+.arrows {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
 
-
+    &__inform {
+        font-family: "Montserrat-400";
+        font-size: 16px;
+        align-self: center;
+    }
+    .arrow {
+        font-size: 30px;
+    }
+    
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    color: white;
+    padding: 27px 72px;
+    margin-top: 100px;
+    
+}
+.copyrigh {
+    font-family: "Montserrat-400";
+    font-size: 16px;
+}
 @media only screen and (max-width: 1110px) {
     .show-case {
     
         &__title {
             font-size: 51.1px;
             line-height: 47.6px;
-            padding-left: 16px;
         }
 
         &__state {
             font-size: 16.8px;
             line-height: 20.5px;
-            padding-left: 16px;
         }
 
         &__explanation {
             font-size: 14.2px;
             line-height:19.8px;
-            padding-left: 16px;
         }
         
         &__btn {
@@ -442,12 +474,9 @@ transform: rotate(45deg);
             }
         }
     }
-    .title-section {
-        padding-left: 16px;
-    }
     .description-section {
         width: 100%;
-        padding-left: 16px;
+
         padding-right: 50px;
     }
 
@@ -459,6 +488,10 @@ transform: rotate(45deg);
         .wrapper {
             padding-left: 0;
             padding-right: 0;
+        }
+        .wrapper-sm16 {
+            padding-left: 16px;
+            padding-right: 16px;
         }
         .burger-open {
             display: inline-block;
@@ -487,9 +520,49 @@ transform: rotate(45deg);
         .offer-section {
             width: 50%;
         }
+        .couch-card {
+            width: 100%;
+            display: block !important;
+
+            &__img {
+                width: 95%;
+            }
+            &__inform {
+                width: 100%;
+            }
+        }
     }
     @media only screen and (max-width: 420px) {
         .offer-section {
             width: 100%;
         }
+        .arrows {
+            display: none;
+        }
+        .couches {
+            .slick-dots {
+            visibility: visible;
+
+            button {
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+                border-radius: 50%; 
+                border: 2px solid gray;
+                font-size: 0;
+                background-color: transparent;
+            }
+            .slick-active{
+                button {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%; 
+                    border: none;
+                    font-size: 0;
+                    background-color: #FF699F;
+                }
+            }  
+        }
+        }
+
     }
