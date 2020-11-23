@@ -34,7 +34,6 @@ $('.carousel-2').slick({
   dots: true,
   arrows: true,
   infinite: false,
-  speed: 300,
   slidesToShow: 2,
   slidesToScroll: 2,
   responsive: [

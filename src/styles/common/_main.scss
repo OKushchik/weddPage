@@ -24,6 +24,29 @@ body {
     font-size: 16px;
     line-height: 153.4%;
 }
+.hover-animation {
+    a {
+            position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 0;
+            display: block;
+            left: 50%;
+            transform: translate(-50%);
+            background: #060606;
+            transition: width .5s;
+        }
+        &:hover {
+            &::after{
+                width: 100%;
+            }
+        }
+    }
+    
+}
+
 // Header
 .navigation {
     display: flex;
@@ -57,24 +80,6 @@ body {
 		}
 }
 
-
-.header__menu a::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 0;
-    display: block;
-    left: 50%;
-    transform: translate(-50%);
-    background: #060606;
-    transition: width .5s;
-}
-.header__menu a:hover::after {
-    width: 100%;
-}
-
-
-
 .menu {
     display: flex;
 
@@ -84,27 +89,10 @@ body {
             font-family: Roboto, sans-serif;
             font-weight: 400;
             font-size: 14px;
-            position: relative;
-            
+        
             a {
                 color: #000000;
                 text-decoration: none; 
-                &::after {
-                    content: ' ';
-                    position: absolute;
-                    height: 2px;
-                    width: 0;
-                    display: block;
-                    left: 50%;
-                    transform: translate(-50%);
-                    background: #060606;
-                    transition: width .5s;
-                }
-                &:hover{
-                    &::after {
-                    width: 100%;
-                    }
-                }
             } 
 
 		}
@@ -365,27 +353,25 @@ transform: rotate(45deg);
     }
 
     &__section {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+
     }
     .slick-arrow, .slick-dots {
         visibility: hidden;
         width: 0; 
         height: 0;
-        display: flex;
-        flex-direction: row;
+
     }
 }
 
 .couch-card {
-    width: 50%;
-    display: flex !important;
-    flex-direction: row;
+    display: flex ;  
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 4px 30px rgba(207, 207, 207, 0.25);
+    border-radius: 2px;
+    width: 95%;
     &__img {
-        display: block;
-        width: 50%;
         margin-right: 33px;
+        
 
         img {
             width: 100%;
@@ -449,16 +435,18 @@ transform: rotate(45deg);
         background-color: transparent;
         border: 2px solid #FF699F;
         border-radius: 3px;
+
+        &--arrow {
+            display: none;
+        }
     }
 
 }
-.clearFloat {
-    clear: both;
-}
+
 .arrows {
     display: flex;
     justify-content: center;
-    padding-top: 25px;
+    margin-top: 25px;
 
     &__inform {
         font-family: "Montserrat-400";
@@ -505,11 +493,6 @@ footer {
             line-height: 20.5px;
         }
 
-        &__explanation {
-            font-size: 14.2px;
-            line-height:19.8px;
-        }
-        
         &__btn {
             margin-left: 16px;
             width: 112.7px;
@@ -570,11 +553,11 @@ footer {
             width: 50%;
         }
         .couch-card {
-            width: 100%;
-            display: block !important;
+            display: block;
 
             &__img {
-                width: 95%;
+                margin-left: -16px;
+                margin-right: -16px;
             }
             &__inform {
                 width: 100%;
@@ -590,28 +573,58 @@ footer {
         }
         .couches {
             .slick-dots {
-            visibility: visible;
+                visibility: visible;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin: auto;
 
-            button {
-                width: 15px;
-                height: 15px;
-                margin-right: 10px;
-                border-radius: 50%; 
-                border: 2px solid gray;
-                font-size: 0;
-                background-color: transparent;
-            }
-            .slick-active{
                 button {
                     width: 15px;
                     height: 15px;
+                    margin-right: 10px;
                     border-radius: 50%; 
-                    border: none;
+                    border: 2px solid gray;
                     font-size: 0;
-                    background-color: #FF699F;
+                    background-color: transparent;
                 }
-            }  
+                .slick-active{
+                    button {
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%; 
+                        border: none;
+                        font-size: 0;
+                        background-color: #FF699F;
+                    }
+                }  
+            }
         }
-        }
+        .couch-card {
+            // text-align: right;
+            position: relative;
+            &__btn {
+                width: 33px;
+                height: 33px;
+                border-radius: 50%;
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: 16px;
 
+                
+                &--text {
+                    display: none;
+                }
+                &--arrow {
+                    display: block;
+                    position: absolute;
+                    top: 56%;
+                    left: 56%;
+                    transform: translate(-50%, -50%);
+
+                }
+            }
+
+        }
     }
