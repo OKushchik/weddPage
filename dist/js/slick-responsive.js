@@ -52,18 +52,18 @@ $('.carousel-2').slick({
 //imitation click on errows
   let arrowsPrev = document.querySelector('.arrows__prev');
   let arrowsNext = document.querySelector('.arrows__next');
-function imitErrows (){
-  let slickPrev = document.querySelector('.slick-prev');
-  let slickNext = document.querySelector('.slick-next');
+  function imitErrows (){
+    let slickPrev = document.querySelector('.slick-prev');
+    let slickNext = document.querySelector('.slick-next');
 
-  arrowsPrev.addEventListener('click', getObj.bind(null,slickPrev))
-  arrowsNext.addEventListener('click', getObj.bind(null,slickNext))
+    arrowsPrev.addEventListener('click', getObj.bind(null,slickPrev))
+    arrowsNext.addEventListener('click', getObj.bind(null,slickNext))
 
-  function getObj (getObj) {
-    let event = new Event("click");
-    getObj.dispatchEvent(event);
+    function getObj (getObj) {
+      let event = new Event("click");
+      getObj.dispatchEvent(event);
+    }
   }
-}
 imitErrows();
 
 // errowsInfo

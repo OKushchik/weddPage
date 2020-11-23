@@ -35,6 +35,10 @@ body {
     font-family: "Montserrat-700";
     font-size: 18px;
     align-self: center;
+    a {
+        text-decoration: none;
+        color: black;
+    }
 }
 .nav {
     display: flex;
@@ -52,6 +56,25 @@ body {
             background-color: transparent;
 		}
 }
+
+
+.header__menu a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    display: block;
+    left: 50%;
+    transform: translate(-50%);
+    background: #060606;
+    transition: width .5s;
+}
+.header__menu a:hover::after {
+    width: 100%;
+}
+
+
+
 .menu {
     display: flex;
 
@@ -61,12 +84,29 @@ body {
             font-family: Roboto, sans-serif;
             font-weight: 400;
             font-size: 14px;
+            position: relative;
             
             a {
                 color: #000000;
                 text-decoration: none; 
-                
+                &::after {
+                    content: ' ';
+                    position: absolute;
+                    height: 2px;
+                    width: 0;
+                    display: block;
+                    left: 50%;
+                    transform: translate(-50%);
+                    background: #060606;
+                    transition: width .5s;
+                }
+                &:hover{
+                    &::after {
+                    width: 100%;
+                    }
+                }
             } 
+
 		}
 }
 //burger-icon
@@ -427,6 +467,9 @@ transform: rotate(45deg);
     }
     .arrow {
         font-size: 30px;
+        :hover {
+            cursor: pointer;
+        }
     }
     
 }
@@ -437,6 +480,12 @@ footer {
     color: white;
     padding: 27px 72px;
     margin-top: 100px;
+    .logo {
+        a {
+            color: white;
+        }
+    }
+
     
 }
 .copyrigh {
