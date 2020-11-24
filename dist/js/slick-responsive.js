@@ -5,24 +5,16 @@ $(window).on('load resize orientationchange', function() {
     $('.carousel').slick({
       dots: true,
       infinite: false,
-      speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
       mobileFirst: true,
       arrows: false,
+      centerMode: true,
+      autoplay: false,
+      adaptiveHeight: true,
       responsive: [
         {
-          breakpoint: 420,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            infinite: true,
-            dots: true,
-            arrows: false,
-          }
-        },
-        {
-          breakpoint: 824,
+          breakpoint: 640,
           settings: "unslick"
         },
       ]
@@ -36,12 +28,18 @@ $('.carousel-2').slick({
   infinite: false,
   slidesToShow: 2,
   slidesToScroll: 2,
+  centerMode: false,
+  centerPadding: '50px',
+  autoplay: false,
+  adaptiveHeight: true,
   responsive: [
     {
-      breakpoint: 420,
+      breakpoint: 640,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        centerMode: true,
+        adaptiveHeight: true, 
       }
     }
   ]

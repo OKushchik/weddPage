@@ -4,6 +4,7 @@
 html{
     background: rgb(197, 190, 190);
 }
+
 body {
     max-width: 1440px;
     margin: 0 auto;
@@ -14,16 +15,19 @@ body {
 .wrapper {
     padding: 0 72px;
 }
+
 .title-section {
     font-family: "Montserrat-700";
     font-size: 36px;
 }
+
 .description-section {
     width: 50%;
     font-family: "Montserrat-400";
     font-size: 16px;
     line-height: 153.4%;
 }
+
 .hover-animation {
     a {
             position: relative;
@@ -54,6 +58,7 @@ body {
     padding-top: 19px;
     padding-bottom: 17px;
 }
+
 .logo {
     font-family: "Montserrat-700";
     font-size: 18px;
@@ -63,11 +68,9 @@ body {
         color: black;
     }
 }
+
 .nav {
     display: flex;
-
-		// &__items {
-		// }
 
 		&__btn {
             width: 116px;
@@ -97,6 +100,7 @@ body {
 
 		}
 }
+
 //burger-icon
 .burger-icon {
     cursor: pointer;
@@ -104,27 +108,32 @@ body {
     position: relative;
     z-index: 1;
 }
+
 .burger-open {
     display: none;
 }
+
 .burger-close {
     margin-top: 16.59px;;
     float: right;
 }
+
 .burger-close__line, .burger-open__line {
     width: 35px;
     height: 5px;
     background-color: #333;
     margin: 6px 0;
 }
-.burger-close__line:first-child {
-transform: rotate(-45deg) translate(-8px, 8px);
-}
-.burger-close__line:last-child {
-transform: rotate(45deg);
-}
-//burger-popup
 
+.burger-close__line:first-child {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.burger-close__line:last-child {
+    transform: rotate(45deg);
+}
+
+//burger-popup
 .burger-popup {
     display: none;
     width: 100%;
@@ -144,9 +153,6 @@ transform: rotate(45deg);
             font-family: "Montserrat-700";
             font-size: 36px;
         }
-
-        // &__list {
-        // }
 
         &__item {
             margin-bottom: 48px;
@@ -220,7 +226,6 @@ transform: rotate(45deg);
             background-color: transparent;
             border: 2px solid #FF699F;
             border-radius: 3px;
-        
         }
 
         &__img {
@@ -233,6 +238,7 @@ transform: rotate(45deg);
             }
         }
 }
+
 // Services
 .services {
     
@@ -250,35 +256,38 @@ transform: rotate(45deg);
         justify-content: space-between;
         margin-top: 48px;
     }
+
     .slick-dots {
         display: flex;
         justify-content: center;
+        margin-top: 12px;
+        button {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            border-radius: 50%; 
+            border: 2px solid gray;
+            font-size: 0;
+            background-color: transparent;
+        }
+
+        .slick-active{
             button {
                 width: 15px;
                 height: 15px;
-                margin-right: 10px;
                 border-radius: 50%; 
-                border: 2px solid gray;
+                border: none;
                 font-size: 0;
-                background-color: transparent;
+                background-color: #FF699F;
             }
-            .slick-active{
-                button {
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 50%; 
-                    border: none;
-                    font-size: 0;
-                    background-color: #FF699F;
-                }
-            }   
+        }   
     }
 }
-  
 
 .service-block {
-    width: 33%;
-    min-height: 550px;
+    width: 95%;
+    height: 100% !important;
+    padding-bottom: 40px;
     border: 1px solid rgba(0, 0, 0, 0.04);
     box-sizing: border-box;
     box-shadow: 0px 4px 30px rgba(207, 207, 207, 0.25);
@@ -305,11 +314,9 @@ transform: rotate(45deg);
     
 }
 
-
+//Offer
 .offer {
     margin-top: 100px;
-    &__title {
-    }
 
     &__description {
         margin-top: 24px;
@@ -322,11 +329,11 @@ transform: rotate(45deg);
     }
 }
 
-
 .offer-section {
     width: 25%;
     padding: 0 3%;
     margin-bottom: 70px;
+
     &__icon {
         text-align: center;
         font-size: 80px;
@@ -352,14 +359,10 @@ transform: rotate(45deg);
         margin-bottom: 30px;
     }
 
-    &__section {
-
-    }
     .slick-arrow, .slick-dots {
         visibility: hidden;
         width: 0; 
         height: 0;
-
     }
 }
 
@@ -369,12 +372,29 @@ transform: rotate(45deg);
     box-shadow: 0px 4px 30px rgba(207, 207, 207, 0.25);
     border-radius: 2px;
     width: 95%;
+    
     &__img {
-        margin-right: 33px;
-        
 
         img {
             width: 100%;
+        }
+    }
+    &__inform {
+        margin-left: 33px;
+
+        th {
+            text-align: left;
+            padding-top: 24px;
+            font-family: "Montserrat-400";
+            font-size: 16px;
+            opacity: 0.5;
+        }
+
+        td {
+            text-align: left;
+            padding-top: 24px;
+            font-family: "Montserrat-400";
+            font-size: 16px;            
         }
     }
 
@@ -395,37 +415,6 @@ transform: rotate(45deg);
         font-family: "Montserrat-400";
         font-size: 16px;
     }
-
-    &__experiance {
-        margin-top: 24px;
-        font-family: "Montserrat-400";
-        font-size: 16px;
-
-        span {
-            opacity: 0.5;
-        }
-    }
-
-    &__ages {
-        margin-top: 24px;
-        font-family: "Montserrat-400";
-        font-size: 16px;
-
-        span {
-            opacity: 0.5;
-        }
-    }
-
-    &__styles {
-        margin-top: 24px;
-        font-family: "Montserrat-400";
-        font-size: 16px;
-
-        span {
-            opacity: 0.5;
-        }
-    }
-
     &__btn {
         margin-top: 88px;
         margin-bottom: 80px;
@@ -440,7 +429,6 @@ transform: rotate(45deg);
             display: none;
         }
     }
-
 }
 
 .arrows {
@@ -453,14 +441,15 @@ transform: rotate(45deg);
         font-size: 16px;
         align-self: center;
     }
+
     .arrow {
         font-size: 30px;
         :hover {
             cursor: pointer;
         }
     }
-    
 }
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -468,21 +457,29 @@ footer {
     color: white;
     padding: 27px 72px;
     margin-top: 100px;
+
     .logo {
+
         a {
             color: white;
         }
     }
 
-    
 }
+
 .copyrigh {
     font-family: "Montserrat-400";
     font-size: 16px;
 }
+
+// -------------------------------------------------------
 @media only screen and (max-width: 1110px) {
     .show-case {
-    
+        &__text{
+            padding-top: 0;
+            padding-right: 20px;
+        }
+
         &__title {
             font-size: 51.1px;
             line-height: 47.6px;
@@ -500,131 +497,167 @@ footer {
             margin-bottom: 0;
             
         }
+
         &__img {
+
             img{
                 height: 100%;
             }
         }
     }
+
     .description-section {
         width: 100%;
-
         padding-right: 50px;
     }
-
   }
-    @media only screen and (max-width: 824px) {
-        .nav {
-            display: none;
+
+  // -------------------------------------------------------
+  @media only screen and (max-width: 940px) {
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .wrapper-sm16 {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .navigation {
+        padding-left: 0;
+        padding-right: 0;
+    }  
+
+    .show-case {
+        flex-direction: column-reverse;
+
+        &__text {
+            width: 100%;
+            padding-top: 50px;
+            padding-right: 72px;
         }
-        .wrapper {
+
+        &__img {
             padding-left: 0;
             padding-right: 0;
-        }
-        .wrapper-sm16 {
-            padding-left: 16px;
-            padding-right: 16px;
-        }
-        .burger-open {
-            display: inline-block;
-          }
-        .show-case {
-            flex-direction: column-reverse;
-
-            &__text {
-                width: 100%;
-            }
-
-            &__img {
-                width: 100%;
-         
-            }
-        }
-        .services {
-
-            &__items {
-                flex-direction: column;
-            }
-        }
-        .service-block {
-            max-width: 100%;
-        }
-        .offer-section {
-            width: 50%;
-        }
-        .couch-card {
-            display: block;
-
-            &__img {
-                margin-left: -16px;
-                margin-right: -16px;
-            }
-            &__inform {
-                width: 100%;
-            }
+            width: 100%;
+    
         }
     }
-    @media only screen and (max-width: 420px) {
-        .offer-section {
-            width: 100%;
-        }
-        .arrows {
-            display: none;
-        }
-        .couches {
-            .slick-dots {
-                visibility: visible;
-                display: flex;
-                justify-content: center;
+
+    .couch-card {
+            display: block;
+
+            &__inform {
                 width: 100%;
-                margin: auto;
+                padding-right: 33px;
+
+                th {
+                    display: block;
+                }
+
+                td {
+                    display: block;
+                    padding-top: 0;
+                }  
+            }
+
+        }
+  }
+
+  // -------------------------------------------------------
+@media only screen and (max-width: 640px) {
+    .nav {
+        display: none;
+    }
+
+    .burger-open {
+        display: inline-block;
+    }
+    
+    .services {
+
+        &__title {
+            margin-top: 56px;
+        }
+
+        &__items {
+            flex-direction: column;
+        }
+    }
+
+    .offer {
+        margin-top: 56px;
+    }
+
+    .offer-section {
+        width: 50%;
+        margin-bottom: 33px;
+    }
+
+    .offer-section {
+        width: 50%;
+    }
+
+    .arrows {
+        display: none;
+    }
+
+    .couches {
+
+        .slick-dots {
+            visibility: visible;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: auto;
+
+            button {
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+                border-radius: 50%; 
+                border: 2px solid gray;
+                font-size: 0;
+                background-color: transparent;
+            }
+            .slick-active{
 
                 button {
                     width: 15px;
                     height: 15px;
-                    margin-right: 10px;
                     border-radius: 50%; 
-                    border: 2px solid gray;
+                    border: none;
                     font-size: 0;
-                    background-color: transparent;
+                    background-color: #FF699F;
                 }
-                .slick-active{
-                    button {
-                        width: 15px;
-                        height: 15px;
-                        border-radius: 50%; 
-                        border: none;
-                        font-size: 0;
-                        background-color: #FF699F;
-                    }
-                }  
-            }
-        }
-        .couch-card {
-            // text-align: right;
-            position: relative;
-            &__btn {
-                width: 33px;
-                height: 33px;
-                border-radius: 50%;
-                position: relative;
-                display: block;
-                margin-left: auto;
-                margin-right: 16px;
-
-                
-                &--text {
-                    display: none;
-                }
-                &--arrow {
-                    display: block;
-                    position: absolute;
-                    top: 56%;
-                    left: 56%;
-                    transform: translate(-50%, -50%);
-
-                }
-            }
-
+            }  
         }
     }
+
+    .couch-card {
+        position: relative;
+
+        &__btn {
+            width: 33px;
+            height: 33px;
+            border-radius: 50%;
+            position: relative;
+            display: block;
+            margin: 0 16px 16px auto;
+
+            &--text {
+                display: none;
+            }
+            &--arrow {
+                display: block;
+                position: absolute;
+                top: 56%;
+                left: 56%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
